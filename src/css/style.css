@@ -1,0 +1,54 @@
+.navbarItem, .active { padding: 8px 34.5px; background-color: #4bab46; color: #18005c; -webkit-transition: 0.5s; transition: 0.5s; }
+
+.background1 { height: 100vh; background-position: center; background-repeat: no-repeat; background-size: cover; background-attachment: fixed; }
+
+@-webkit-keyframes changeColor { 0% { background-color: #4bab46;
+    color: black; }
+  50% { background-color: black;
+    color: green; }
+  100% { background-color: #4bab46;
+    color: black; } }
+
+@keyframes changeColor { 0% { background-color: #4bab46;
+    color: black; }
+  50% { background-color: black;
+    color: green; }
+  100% { background-color: #4bab46;
+    color: black; } }
+
+@-webkit-keyframes windowOnLoad { from { opacity: 0; }
+  to { opacity: 1; } }
+
+@keyframes windowOnLoad { from { opacity: 0; }
+  to { opacity: 1; } }
+
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; color: grey; font-family: Arial, Helvetica, sans-serif; }
+
+body, html { height: 100%; margin: 0; -webkit-animation: 1s forwards windowOnLoad; animation: 1s forwards windowOnLoad; }
+
+.background1 { background-image: url("../img/heisenberg-breaking-bad-minimalist_1920x1080_xtrafondos.com.jpg"); }
+
+.navbar { display: -webkit-box; display: -ms-flexbox; display: flex; list-style-type: none; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding-top: 8px; position: fixed; margin: auto; left: 50%; margin-left: -229px; z-index: 200; }
+
+.navbarItem { padding: 8px 10px; cursor: pointer; margin: 1px; -webkit-box-shadow: 8px 8px 40px 12px #69aa60; box-shadow: 8px 8px 40px 12px #69aa60; }
+
+.active { background-color: black; color: green; -webkit-box-shadow: 8px 8px 40px 12px white; box-shadow: 8px 8px 40px 12px white; }
+
+.mainContainer { width: 80%; margin: auto; }
+
+.grid { padding-top: 60px; display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[4]; grid-template-columns: repeat(4, 1fr); grid-gap: 1rem; -ms-grid-rows: (300px)[60]; grid-template-rows: repeat(60, 300px); }
+
+@media (max-width: 1210px) { .grid { -ms-grid-columns: (1fr)[3]; grid-template-columns: repeat(3, 1fr); } }
+
+.card { -webkit-perspective: 500px; perspective: 500px; background-color: transparent; }
+
+.card img { width: 100%; height: 200px; -o-object-fit: cover; object-fit: cover; }
+
+.card-inner { position: relative; width: 100%; height: 100%; -webkit-transition: -webkit-transform 0.8s; transition: -webkit-transform 0.8s; transition: transform 0.8s; transition: transform 0.8s, -webkit-transform 0.8s; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
+
+.card:hover .card-inner { -webkit-transform: rotateY(180deg); transform: rotateY(180deg); }
+
+.card-front, .card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+
+.card-back { background-color: #333; color: white; -webkit-transform: rotateY(180deg); transform: rotateY(180deg); }
+/*# sourceMappingURL=style.css.map */
